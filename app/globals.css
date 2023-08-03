@@ -220,6 +220,23 @@ a {
 }
 
 
+form {
+    display: flex;
+}
+
+form>input {
+    border: 2px solid #161616;
+    border-radius: 5px;
+    background: #ffffff7d;
+    color: #000000;
+    outline: none;
+    width: clamp(350px, 100%, 600px);
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin: 5px auto;
+}
+
+
 
 @media(hover: hover) {
     a:not(.repos--links a):hover {
