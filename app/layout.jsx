@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 
-const poppins = Poppins({ weight: ["400", "700"], subsets: ["latin"] });
+const poppins = Poppins({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "Next.js Crash Course by Traversy Media",
