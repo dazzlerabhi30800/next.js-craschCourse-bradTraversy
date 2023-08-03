@@ -5,6 +5,9 @@ const fetchRepos = async () => {
   const response = await fetch(
     "https://api.github.com/users/dazzlerabhi30800/repos"
   );
+
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  // wait 1 second
   const repos = await response.json();
   return repos;
 };
@@ -25,7 +28,7 @@ const CodeRepo = async () => {
             watchers_count,
           }) => {
             return (
-              <li key={id}>
+              <li className="card" key={id}>
                 <Link className="code--link" href={`/code/repos/${name}`}>
                   <h2>{name}</h2>
                   <p>

@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <div className="container">
         <Link className="logo" href="/">
-          <h1>DA</h1>
+          <h1 style={{ margin: "5px", width: "fit-content" }}>DA</h1>
         </Link>
         <ul className="links">
           <li>
