@@ -1,20 +1,13 @@
-const fetchRepoByName = async (name) => {
-  const response = await fetch(
-    `https://api.github.com/repos/dazzlerabhi30800/${name}`
-  );
+import Link from "next/link";
+// import CurrentRepo from "app/components/CurrentRepo";
+import CurrentRepo from "app/components/CurrentRepo";
 
-  await new Promise((res) => setTimeout(res, 2000));
-
-  const repo = await response.json();
-  return repo;
-};
-
-const RepoPage = async ({ params: { name } }) => {
-  const repo = await fetchRepoByName(name);
+const RepoPage = ({ params: { name } }) => {
   return (
-    <div className="card">
-      <h1>{repo.name}</h1>
-      <p style={{ margin: "5px 0" }}>{repo.full_name}</p>
+    <div className="card" style={{ color: "#000" }}>
+      <Link href="/code/repos">Back To Repo</Link>
+      <CurrentRepo name={name} />
+      {/* <Header /> */}
     </div>
   );
 };

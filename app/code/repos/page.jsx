@@ -2,11 +2,11 @@ import Link from "next/link";
 import { FaStar, FaCodeBranch, FaEye } from "react-icons/fa";
 
 const fetchRepos = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch(
     "https://api.github.com/users/dazzlerabhi30800/repos"
   );
 
-  await new Promise((resolve) => setTimeout(resolve, 3000));
   // wait 1 second
   const repos = await response.json();
   return repos;
