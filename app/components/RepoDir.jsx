@@ -2,7 +2,10 @@ import Link from "next/link";
 
 const fetchRepoContents = async (name) => {
   const contents = await fetch(
-    `https://api.github.com/repos/dazzlerabhi30800/${name}/contents`
+    `https://api.github.com/repos/dazzlerabhi30800/${name}/contents`,
+    {
+      next: { revalidate: 60 },
+    }
   );
 
   const repoContents = await contents.json();

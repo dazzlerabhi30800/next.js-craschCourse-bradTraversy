@@ -202,6 +202,25 @@ a {
 }
 
 
+/* Course Card */
+.courses--wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.course {
+    background: #00000055;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.course a {
+    color: #e4fb33;
+}
+
+
+
 @media(hover: hover) {
     a:not(.repos--links a):hover {
         color: #f8f8f8;
