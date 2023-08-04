@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Courses from "./components/Courses";
 import CourseSearch from "./components/CourseSearch";
+import PostInput from "./components/PostInput";
 import styles from "./page.module.css";
 import Loading from "./loading";
 
@@ -23,10 +24,11 @@ export default function HomePage() {
   return (
     <div className={styles.mainPage}>
       <h1 style={{ margin: "8px 0" }}>Welcome to Abhishek Choudhary Courses</h1>
-      <CourseSearch
-        getSearchResults={(results) => setCourses(results)}
-        setLoading={setLoading}
-      />
+      {/* <CourseSearch */}
+      {/*   getSearchResults={(results) => setCourses(results)} */}
+      {/*   setLoading={setLoading} */}
+      {/* /> */}
+      <PostInput getSearchResults={(results) => setCourses(results)} />
       {loading && <Loading />}
       <Courses courses={courses} />
     </div>

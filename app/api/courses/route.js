@@ -10,6 +10,7 @@ export async function GET(request) {
 export async function POST(request) {
     const { title, description, level, link } = await request.json();
 
+
     const newCourse = {
         id: uuidv4(),
         title,
